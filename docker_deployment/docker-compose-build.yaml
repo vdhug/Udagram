@@ -1,18 +1,18 @@
 version: "3"
 services:
- reverseproxy:
- build:
- context: .
- image: vitorhugo/reverseproxy 
- backend_user:
- build:
- context: ../udacity-c3-restapi-user
- image: vitorhugo/udacity-restapi-user
- backend_feed:
- build:
- context: ../udacity-c3-restapi-feed 
- image: vitorhugo/udacity-restapi-feed
- frontend:
- build:
- context: ../udacity-c3-frontend 
- image: vitorhugo/udacity-frontend:local
+  reverseproxy:
+    build:
+      context: .
+    image: vitorhugo/reverseproxy 
+  backend_user:
+    build:
+      context: ../udacity-c3-restapi-user
+    image: vitorhugo/udacity-restapi-user
+  backend_feed:
+    build:
+      context: ../udacity-c3-restapi-feed  
+    image: vitorhugo/udacity-restapi-feed
+  frontend:
+    build:
+      context: ../udacity-c3-frontend  
+    image: vitorhugo/udacity-restapi-frontend
