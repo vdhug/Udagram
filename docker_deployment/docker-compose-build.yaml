@@ -6,13 +6,13 @@ services:
     image: vitorhugo/reverseproxy 
   backend_user:
     build:
-      context: ../udacity-c3-restapi-user
-    image: vitorhugo/udacity-restapi-user
+      context: ../udagram-restapi-user
+    image: vitorhugo/udagram-restapi-user
   backend_feed:
     build:
-      context: ../udacity-c3-restapi-feed  
-    image: vitorhugo/udacity-restapi-feed
+      context: ../udagram-restapi-feed  
+    image: vitorhugo/udagram-restapi-feed
   frontend:
     build:
-      context: ../udacity-c3-frontend  
-    image: vitorhugo/udacity-restapi-frontend
+      context: ../udagram-frontend  
+    image: vitorhugo/udagram-frontend
