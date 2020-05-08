@@ -40,3 +40,10 @@ venv/
 .elasticbeanstalk/*
 !.elasticbeanstalk/*.cfg.yml
 !.elasticbeanstalk/*.global.yml
+
+aws-secret.yaml
+env-secret.yaml
+env-config.yaml
+
+password.txt
+username.txt
