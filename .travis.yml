@@ -15,10 +15,16 @@ before_script:
 
 script:
   - docker --version # print the version for logging
-  - docker build -t udagram-restapi-feed .
+  - docker build -t udagram-restapi-user ./udagram-restapi-user/
+  - docker tag udagram-restapi-user vitorhugo/udagram-restapi-user:latest
+  - docker build -t udagram-restapi-feed ./udagram-restapi-feed/
   - docker tag udagram-restapi-feed vitorhugo/udagram-restapi-feed:latest
+  - docker build -t udagram-frontend ./udagram-frontend/
+  - docker tag udagram-frontend vitorhugo/udagram-frontend:latest
 
 # Tasks to perform after the process is successful. Formatting the Docker username and password as below enables you to programmatically log in without having the password exposed in logs.
 after_success:
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
+  - docker push vitorhugo/udagram-restapi-user
   - docker push vitorhugo/udagram-restapi-feed
+  - docker push vitorhugo/udagram-frontend
