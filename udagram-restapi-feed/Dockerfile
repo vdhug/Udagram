@@ -8,6 +8,9 @@ COPY package*.json ./
 RUN npm install 
 # Copy the rest of the code
 COPY . .
+
+# Environment variable to be set on build
+ARG NAME
 # Expose the port 
 EXPOSE 8080
 # Define the command that should be executed

@@ -1,7 +1,7 @@
 version: "3"
 services:
   reverseproxy:
-      image: vitorhugo/reverseproxy
+      image: vitorhugo/reverse-proxy
       ports:
           - 8080:8080
       restart: always

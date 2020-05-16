@@ -3,7 +3,7 @@ services:
   reverseproxy:
     build:
       context: .
-    image: vitorhugo/reverseproxy 
+    image: vitorhugo/reverse-proxy 
   backend_user:
     build:
       context: ../udagram-restapi-user
